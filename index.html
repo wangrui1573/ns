@@ -8,10 +8,10 @@
 
 <body>
   <h1>Web Fusée Launcher</h1>
-  <p>Fusee Launcher ported to JavaScript using WebUSB.</p>
+  <p>Fusee Web Launcher (more payloads included)</p>
   <p>
-    Source can be found on <a href="https://github.com/atlas44/web-fusee-launcher">GitHub</a> (or by hitting view source, there is no backend!).
-    Ported from <a href="https://github.com/reswitched/fusee-launcher">fusee-launcher</a>.
+    Source can be found on <a href="https://github.com/Netfreak25/web-fusee-launcher">GitHub</a> (or by hitting view source, there is no backend!).
+    Ported from <a href="https://github.com/atlas44/web-fusee-launcher">WebFG</a> which was ported from <a href="https://github.com/reswitched/fusee-launcher">fusee-launcher</a>.
     Thanks to ktemkin and ReSwitched for Fusée Gelée and a ton of other things!
   </p>
 
@@ -45,8 +45,13 @@
   <div>
     <form id="mainForm">
       <p>
-        <input type="radio" name="payload" id="fusee.bin" value="fusee.bin" checked>
-        <label for="fusee.bin">Example payload (fusee.bin)</label>
+        <input type="radio" name="payload" id="team_xecuter.bin" value="team_xecuter.bin" checked>
+        <label for="team_xecuter.bin">SX OS (team_xecuter.bin)</label>
+      </p>
+
+      <p>
+        <input type="radio" name="payload" id="hekate_ctcaer_2.3.bin" value="hekate_ctcaer_2.3.bin">
+        <label for="fusee.bin">Hekate 2.3 (hekate_ctcaer_2.3.bin)</label>
       </p>
 
       <p>
@@ -56,13 +61,14 @@
       </p>
     </form>
 
-    <button id="goButton">Do the thing!</button>
+    <button id="goButton">Send Payload!</button>
   </div>
 
   <h3>Result:</h3>
   <textarea cols="80" rows="12" id="output"></textarea>
 
-  <script src="./fusee.bin.js"></script>
+  <script src="./hekate_ctcaer_2.3.bin.js"></script>
+  <script src="./team_xecuter.bin.js"></script>
   <script src="./main.js"></script>
 </body>
 

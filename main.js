@@ -113,8 +113,11 @@ document.getElementById("goButton").addEventListener("click", async () => {
   logOutput(`Preparing to launch ${payloadType}...`);
 
   let payload;
-  if (payloadType === "fusee.bin") {
-    payload = fusee;
+  if (payloadType === "team_xecuter.bin") {
+    payload = sxos;
+  } else if (payloadType === "hekate_ctcaer_2.3.bin") {
+    payload = hekate;
+
   } else if (payloadType === "uploaded") {
     const file = document.getElementById("payloadUpload").files[0];
     if (!file) {
