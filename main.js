@@ -117,7 +117,16 @@ document.getElementById("goButton").addEventListener("click", async () => {
     payload = sxos;
   } else if (payloadType === "hekate_ctcaer_2.3.bin") {
     payload = hekate;
-
+  } else if (payloadType === "biskeydumpv6.bin") {
+    payload = biskeydumpv6;
+  } else if (payloadType === "briccmiiv2.bin") {
+    payload = briccmiiv2;
+  } else if (payloadType === "gptrestorev1.bin") {
+    payload = gptrestorev1;
+  } else if (payloadType === "memloaderv1.bin") {
+    payload = memloaderv1;
+  } else if (payloadType === "romdumpv1.bin") {
+    payload = romdumpv1;
   } else if (payloadType === "uploaded") {
     const file = document.getElementById("payloadUpload").files[0];
     if (!file) {

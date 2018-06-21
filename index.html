@@ -20,7 +20,7 @@
     <ol>
       <li>Put the Switch in RCM, and connect it to your device.</li>
       <li>Select either the example payload, or upload one.</li>
-      <li>Press 'Do the thing!'</li>
+      <li>Press 'Send Payload!'</li>
       <li>On the consent screen that appears, select 'APX' and hit confirm.</li>
       <li>If all goes well, the payload will launch!</li>
     </ol>
@@ -51,8 +51,36 @@
 
       <p>
         <input type="radio" name="payload" id="hekate_ctcaer_2.3.bin" value="hekate_ctcaer_2.3.bin">
-        <label for="fusee.bin">Hekate 2.3 (hekate_ctcaer_2.3.bin)</label>
+        <label for="hekate_ctcaer_2.3.bin">Hekate 2.3 (hekate_ctcaer_2.3.bin)</label>
       </p>
+
+
+      <p>
+        <input type="radio" name="payload" id="biskeydumpv6.bin" value="biskeydumpv6.bin">
+        <label for="biskeydumpv6.bin">biskeydump v6 (biskeydumpv6.bin)</label>
+      </p>
+
+      <p>
+        <input type="radio" name="payload" id="briccmiiv2.bin" value="briccmiiv2.bin">
+        <label for="briccmiiv2.bin">briccmii v2 (briccmiiv2.bin)</label>
+      </p>
+
+      <p>
+        <input type="radio" name="payload" id="gptrestorev1.bin" value="gptrestorev1.bin">
+        <label for="gptrestorev1.bin">gptrestore v1 (gptrestorev1.bin)</label>
+      </p>
+
+      <p>
+        <input type="radio" name="payload" id="memloaderv1.bin" value="memloaderv1.bin">
+        <label for="memloaderv1.bin">memloader v1 (memloaderv1.bin)</label>
+      </p>
+
+      <p>
+        <input type="radio" name="payload" id="romdumpv1.bin" value="romdumpv1.bin">
+        <label for="romdumpv1.bin">romdump v1 (romdumpv1.bin)</label>
+      </p>
+
+
 
       <p>
         <input type="radio" name="payload" id="uploaded" value="uploaded">
@@ -67,8 +95,13 @@
   <h3>Result:</h3>
   <textarea cols="80" rows="12" id="output"></textarea>
 
-  <script src="./hekate_ctcaer_2.3.bin.js"></script>
-  <script src="./team_xecuter.bin.js"></script>
+  <script src="./js-payloads/hekate_ctcaer_2.3.bin.js"></script>
+  <script src="./js-payloads/team_xecuter.bin.js"></script>
+  <script src="./js-payloads/biskeydumpv6.bin.js"></script>
+  <script src="./js-payloads/briccmiiv2.bin.js"></script>
+  <script src="./js-payloads/gptrestorev1.bin.js"></script>
+  <script src="./js-payloads/memloaderv1.bin.js"></script>
+  <script src="./js-payloads/romdumpv1.bin.js"></script>
   <script src="./main.js"></script>
 </body>
 
