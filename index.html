@@ -8,40 +8,10 @@
 
 <body>
   <h1>Web Fusée Launcher</h1>
-  <p>Fusee Web Launcher (more payloads included)</p>
-  <p>
-    Source can be found on <a href="https://github.com/Netfreak25/web-fusee-launcher">GitHub</a> (or by hitting view source, there is no backend!).
-    Ported from <a href="https://github.com/atlas44/web-fusee-launcher">WebFG</a> which was ported from <a href="https://github.com/reswitched/fusee-launcher">fusee-launcher</a>.
-    Thanks to atlas44 for the java port, ktemkin and ReSwitched for Fusée Gelée and a ton of other things!
-  </p>
 
-  <p>
-    <h4>Instructions:</h4>
-    <ol>
-      <li>Put the Switch in RCM, and connect it to your device.</li>
-      <li>Select either the example payload, or upload one.</li>
-      <li>Press 'Send Payload!'</li>
-      <li>On the consent screen that appears, select 'APX' and hit confirm.</li>
-      <li>If all goes well, the payload will launch!</li>
-    </ol>
-  </p>
+  <p>Fusee Web Launcher Mod (by netfreak)</p>
 
-  <p>
-    <h4>Random stuff:</h4>
-    <ul>
-      <li>This is pretty poorly tested. I just kind wrote it and whatever. I'm not responsible if anything goes wrong!</li>
-      <li>This does NOT work on Windows due to a limitation in the Chrome implementation of WebUSB (and probably other reasons!)</li>
-      <li>This does NOT currently work on any browser but Chrome, because they don't implement WebUSB.</li>
-      <li>On Linux, you might get an access denied error!
-        If you do, you can try creating a file at <code>/etc/udev/rules.d/50-switch.rules</code>
-        <div>With the following contents:</div>
-        <div><code>SUBSYSTEM=="usb", ATTR{idVendor}=="0955", MODE="0664", GROUP="plugdev"</code></div>
-      </li>
-      <li>This has been tested and appears to work on Linux, OSX, Android (unrooted) and Chromebooks. Your mileage may vary.</li>
-    </ul>
-  </p>
-
-  <h3>Payload:</h3>
+  <h3>Choose your Payload</h3>
   <div>
     <form id="mainForm">
       <p>
@@ -94,6 +64,50 @@
 
   <h3>Result:</h3>
   <textarea cols="80" rows="12" id="output"></textarea>
+
+
+  <p>
+    Source can be found on <a href="https://github.com/Netfreak25/web-fusee-launcher">GitHub</a> (or by hitting view source, there is no backend!).
+    Mod of <a href="https://github.com/atlas44/web-fusee-launcher">WebFG</a> which was ported from <a href="https://github.com/reswitched/fusee-launcher">fusee-launcher</a>.
+    Thanks to atlas44 for the java port, rajkosto for many of the payloads, ktemkin and ReSwitched for Fusée Gelée and a ton of other things!
+  </p>
+
+  <p>
+    <h4>Instructions:</h4>
+    <ol>
+      <li>Put the Switch in RCM, and connect it to your device.</li>
+      <li>Select either the example payload, or upload one.</li>
+      <li>Press 'Send Payload!'</li>
+      <li>On the consent screen that appears, select 'APX' and hit confirm.</li>
+      <li>If all goes well, the payload will launch!</li>
+    </ol>
+  </p>
+
+  <p>
+    <h4>Random Stuff</h4>
+    <ul>
+      <li>This is pretty poorly tested. I just kind wrote it and whatever. I'm not responsible if anything goes wrong!</li>
+      <li>This does NOT work on Windows due to a limitation in the Chrome implementation of WebUSB (and probably other reasons!)</li>
+      <li>This does NOT currently work on any browser but Chrome, because they don't implement WebUSB.</li>
+      <li>On Linux, you might get an access denied error!
+        If you do, you can try creating a file at <code>/etc/udev/rules.d/50-switch.rules</code>
+        <div>With the following contents:</div>
+        <div><code>SUBSYSTEM=="usb", ATTR{idVendor}=="0955", MODE="0664", GROUP="plugdev"</code></div>
+      </li>
+      <li>This has been tested and appears to work on Linux, OSX, Android (unrooted) and Chromebooks. Your mileage may vary.</li>
+    </ul>
+  </p>
+
+
+
+  <p>
+    <h4>Payload Sources</h4>
+    <ul>
+      <li>hekate from https://github.com/CTCaer/hekate/releases</li>
+      <li>sxos from https://sx.xecuter.com/</li>
+      <li>all other payloads from https://switchtools.sshnuke.net/</li>
+    </ul>
+  </p>
 
   <script src="./js-payloads/hekate_ctcaer_2.3.bin.js"></script>
   <script src="./js-payloads/team_xecuter.bin.js"></script>
