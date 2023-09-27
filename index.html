@@ -2,128 +2,148 @@
 <html>
 
 <head>
-    <link rel="manifest" href="manifest.json">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="initial-scale=0.9">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=0.9">
   <meta charset="utf-8">
   <title>WebFG</title>
+
+  <script src="bootstrap.min.js"></script>
+  <link rel="stylesheet" href="bootstrap.min.css">
+
 </head>
 
-<body>
-  <h1>Switch WEB在线注入</h1>
+<body style="padding-left: 10px;">
+  <h1>Web Fusée Launcher</h1>
 
-  <p>从网页引导Switch破解</p>
-  <p>
-    Source can be found on <a href="https://github.com/Netfreak25/web-fusee-launcher">GitHub</a> 
-  </p>
-
-  <h3>选择负载</h3>
-  <div>
-    <form id="mainForm">
-      <p>
-        <input type="radio" name="payload" id="sxos.bin" value="sxos.bin" checked>
-        <label for="sxos.bin">SX OS (sxos.bin)</label>
-      </p>
-
-      <!-- <p>
-        <input type="radio" name="payload" id="hekate_ctcaer_2.3.bin" value="hekate_ctcaer_2.3.bin">
-        <label for="hekate_ctcaer_2.3.bin">Hekate 2.3 (hekate_ctcaer_2.3.bin)</label>
-      </p>
+  <p>Fusee Web Launcher (Mod by Khaled Ahmed @KsAmJ)</p>
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+        aria-selected="true">Launcher</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+        aria-selected="false">Instructions</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+        aria-selected="false">Random Stuff</a>
+    </li>
 
 
-      <p>
-        <input type="radio" name="payload" id="biskeydumpv6.bin" value="biskeydumpv6.bin">
-        <label for="biskeydumpv6.bin">biskeydump v6 (biskeydumpv6.bin)</label>
-      </p>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
-      <p>
-        <input type="radio" name="payload" id="briccmiiv2.bin" value="briccmiiv2.bin">
-        <label for="briccmiiv2.bin">briccmii v2 (briccmiiv2.bin)</label>
-      </p>
+      <table>
+        <tr>
+          <td style="vertical-align: top;">
+            <h3>Quick Launch</h3>
+            <div style="padding: 15px;">
+              <button class="btn btn-danger" id="btnSXOS">SX OS Payload</button><br>
+              <button class="btn btn-primary" id="btnHekate" style="margin-top: 10px;">hekate - CTCaer mod v4.0
+                Payload</button>
+              <br>
 
-      <p>
-        <input type="radio" name="payload" id="gptrestorev1.bin" value="gptrestorev1.bin">
-        <label for="gptrestorev1.bin">gptrestore v1 (gptrestorev1.bin)</label>
-      </p>
+            </div>
+            <h3>Other Payloads</h3>
+            <a id="btnOtherPayLoads" href="#">Click Here</a>
+            <div id="divOtherPayLoads" style="display: none;">
+              <form id="mainForm">
+                <p>
+                  <!-- <input type="radio" name="payload" id="team_xecuter.bin" value="team_xecuter.bin" checked>
+                  <label for="team_xecuter.bin">SX OS (team_xecuter.bin)</label>
+                  <br>
+                  <input type="radio" name="payload" id="hekate_ctcaer_2.3.bin" value="hekate_ctcaer_2.3.bin">
+                  <label for="hekate_ctcaer_2.3.bin">Hekate 2.3 (hekate_ctcaer_2.3.bin)</label>
+                  <br> -->
+                  <input type="radio" name="payload" id="biskeydumpv6.bin" value="biskeydumpv6.bin">
+                  <label for="biskeydumpv6.bin">biskeydump v6 (biskeydumpv6.bin)</label>
+                  <br>
+                  <input type="radio" name="payload" id="briccmiiv2.bin" value="briccmiiv2.bin">
+                  <label for="briccmiiv2.bin">briccmii v2 (briccmiiv2.bin)</label>
+                  <br>
+                  <input type="radio" name="payload" id="gptrestorev1.bin" value="gptrestorev1.bin">
+                  <label for="gptrestorev1.bin">gptrestore v1 (gptrestorev1.bin)</label>
+                  <br>
+                  <input type="radio" name="payload" id="memloaderv1.bin" value="memloaderv1.bin">
+                  <label for="memloaderv1.bin">memloader v1 (memloaderv1.bin)</label>
+                  <br>
+                  <input type="radio" name="payload" id="romdumpv1.bin" value="romdumpv1.bin">
+                  <label for="romdumpv1.bin">romdump v1 (romdumpv1.bin)</label>
+                </p>
 
-      <p>
-        <input type="radio" name="payload" id="memloaderv1.bin" value="memloaderv1.bin">
-        <label for="memloaderv1.bin">memloader v1 (memloaderv1.bin)</label>
-      </p>
+                <p>
+                  <input type="radio" name="payload" id="uploaded" value="uploaded">
+                  <label for="uploaded">Upload your own payload:</label>
+                  <input type="file" id="payloadUpload">
+                </p>
+              </form>
 
-      <p>
-        <input type="radio" name="payload" id="romdumpv1.bin" value="romdumpv1.bin">
-        <label for="romdumpv1.bin">romdump v1 (romdumpv1.bin)</label>
-      </p> -->
+              <button id="goButton" class="btn btn-primary">Send Payload!</button>
+            </div>
+          </td>
+          <td style="text-align: left;vertical-align: top;">
+            <h3>Result:</h3>
+            <textarea cols="80" rows="12" id="output"></textarea>
+          </td>
+        </tr>
+      </table>
 
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+      <ol>
+        <li>Put the Switch in RCM, and connect it to your device.</li>
+        <li>Select either the example payload, or upload one.</li>
+        <li>Press 'Send Payload!'</li>
+        <li>On the consent screen that appears, select 'APX' and hit confirm.</li>
+        <li>If all goes well, the payload will launch!</li>
+      </ol>
 
+      <br><br>
+      Mod of <a href="https://github.com/atlas44/web-fusee-launcher">WebFG</a> which was ported from <a href="https://github.com/reswitched/fusee-launcher">fusee-launcher</a>.
+      Thanks to atlas44 for the java port, rajkosto for many of the payloads, ktemkin and ReSwitched for Fusée Gelée
+      and
+      a ton of other things!
+    </div>
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+      <ul>
+        <li>This is pretty poorly tested. I just kind wrote it and whatever. I'm not responsible if anything goes
+          wrong!</li>
+        <li>This does NOT work on Windows due to a limitation in the Chrome implementation of WebUSB (and probably
+          other
+          reasons!)</li>
+        <li>This does NOT currently work on any browser but Chrome, because they don't implement WebUSB.</li>
+        <li>On Linux, you might get an access denied error!
+          If you do, you can try creating a file at <code>/etc/udev/rules.d/50-switch.rules</code>
+          <div>With the following contents:</div>
+          <div><code>SUBSYSTEM=="usb", ATTR{idVendor}=="0955", MODE="0664", GROUP="plugdev"</code></div>
+        </li>
+        <li>This has been tested and appears to work on Linux, OSX, Android (unrooted) and Chromebooks. Your mileage
+          may
+          vary.</li>
 
-      <p>
-        <input type="radio" name="payload" id="uploaded" value="uploaded">
-        <label for="uploaded">Upload payload:</label>
-        <input type="file" id="payloadUpload">
-      </p>
-    </form>
-
-    <button id="goButton">Send Payload!</button>
+        <li style="margin-top: 50px;">Contact Me: @ksamj</li>
+      </ul>
+    </div>
   </div>
 
-  <h3>Result:</h3>
-  <textarea cols="80" rows="12" id="output"></textarea>
-
-
-  <p>
-    <h4>Instructions:</h4>
-    <ol>
-      <li>Put the Switch in RCM, and connect it to your device.</li>
-      <li>Select either the example payload, or upload one.</li>
-      <li>Press 'Send Payload!'</li>
-      <li>On the consent screen that appears, select 'APX' and hit confirm.</li>
-      <li>If all goes well, the payload will launch!</li>
-    </ol>
-  </p>
-
-  <p>
-    <h4>Random Stuff</h4>
-    <ul>
-      <li>This is pretty poorly tested. I just kind wrote it and whatever. I'm not responsible if anything goes wrong!</li>
-      <li>This does NOT work on Windows due to a limitation in the Chrome implementation of WebUSB (and probably other reasons!)</li>
-      <li>This does NOT currently work on any browser but Chrome, because they don't implement WebUSB.</li>
-      <li>On Linux, you might get an access denied error!
-        If you do, you can try creating a file at <code>/etc/udev/rules.d/50-switch.rules</code>
-        <div>With the following contents:</div>
-        <div><code>SUBSYSTEM=="usb", ATTR{idVendor}=="0955", MODE="0664", GROUP="plugdev"</code></div>
-      </li>
-      <li>This has been tested and appears to work on Linux, OSX, Android (unrooted) and Chromebooks. Your mileage may vary.</li>
-    </ul>
-  </p>
-
-
-
-  <p>
-    <h4>Payload Sources</h4>
-    <ul>
-      <li>hekate from https://github.com/CTCaer/hekate/releases</li>
-      <li>sxos from https://sx.xecuter.com/</li>
-      <li>all other payloads from https://switchtools.sshnuke.net/</li>
-    </ul>
-  </p>
-
-  <!-- <script src="./js-payloads/hekate_ctcaer_2.3.bin.js"></script> -->
-  <script src="./js-payloads/sxos.bin.js"></script>
-  <!-- <script src="./js-payloads/biskeydumpv6.bin.js"></script>
+  <script src="./js-payloads/hekate_ctcaer_40.bin.js"></script>
+  <script src="./js-payloads/team_xecuter.bin.js"></script>
+  <script src="./js-payloads/biskeydumpv6.bin.js"></script>
   <script src="./js-payloads/briccmiiv2.bin.js"></script>
   <script src="./js-payloads/gptrestorev1.bin.js"></script>
   <script src="./js-payloads/memloaderv1.bin.js"></script>
-  <script src="./js-payloads/romdumpv1.bin.js"></script> -->
-  <script src="./main.js"></script>
+  <script src="./js-payloads/romdumpv1.bin.js"></script>
+  <script src="./mainJS.js?ver=2"></script>
 </body>
 
 </html>
