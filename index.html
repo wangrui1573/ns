@@ -9,7 +9,6 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="initial-scale=0.9">
   <meta charset="utf-8">
@@ -21,23 +20,22 @@
 </head>
 
 <body style="padding-left: 10px;">
-  <h1>Web Fusée Launcher</h1>
+  <h1>Nintendo Switch Web 注入</h1>
 
-  <p>Fusee Web Launcher (Mod by Khaled Ahmed @KsAmJ)</p>
+  <p>Fusee Web Launcher (Mod by RealWang)</p>
   <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item">
       <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
-        aria-selected="true">Launcher</a>
+        aria-selected="true">加载</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
-        aria-selected="false">Instructions</a>
+        aria-selected="false">介绍</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
-        aria-selected="false">Random Stuff</a>
+        aria-selected="false">备注</a>
     </li>
-
 
   </ul>
   <div class="tab-content" id="myTabContent">
@@ -46,7 +44,7 @@
       <table>
         <tr>
           <td style="vertical-align: top;">
-            <h3>Quick Launch</h3>
+            <h3>快速启动</h3>
             <div style="padding: 15px;">
               <button class="btn btn-danger" id="btnSXOS">SX OS Payload</button><br>
               <button class="btn btn-primary" id="btnHekate" style="margin-top: 10px;">hekate - CTCaer mod v4.0
@@ -54,8 +52,8 @@
               <br>
 
             </div>
-            <h3>Other Payloads</h3>
-            <a id="btnOtherPayLoads" href="#">Click Here</a>
+            <h4>其他 Payloads</h4>
+            <a id="btnOtherPayLoads" href="#">点击展开</a>
             <div id="divOtherPayLoads" style="display: none;">
               <form id="mainForm">
                 <p>
@@ -88,11 +86,11 @@
                 </p>
               </form>
 
-              <button id="goButton" class="btn btn-primary">Send Payload!</button>
+              <button id="goButton" class="btn btn-primary">发送 Payload!</button>
             </div>
           </td>
           <td style="text-align: left;vertical-align: top;">
-            <h3>Result:</h3>
+            <h3>日志:</h3>
             <textarea cols="80" rows="12" id="output"></textarea>
           </td>
         </tr>
@@ -101,37 +99,28 @@
     </div>
     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
       <ol>
-        <li>Put the Switch in RCM, and connect it to your device.</li>
-        <li>Select either the example payload, or upload one.</li>
-        <li>Press 'Send Payload!'</li>
-        <li>On the consent screen that appears, select 'APX' and hit confirm.</li>
-        <li>If all goes well, the payload will launch!</li>
+        <li>将 Switch 置于 RCM 中，并将其连接到您的设备</li>
+        <li>选择示例有效负载，或上传一个</li>
+        <li>点击 '发送 Payload!'</li>
+        <li>在出现的同意屏幕上，选择“APX”并点击确认</li>
+        <li>如果一切顺利，Payload将成功注入</li>
       </ol>
 
       <br><br>
-      Mod of <a href="https://github.com/atlas44/web-fusee-launcher">WebFG</a> which was ported from <a href="https://github.com/reswitched/fusee-launcher">fusee-launcher</a>.
-      Thanks to atlas44 for the java port, rajkosto for many of the payloads, ktemkin and ReSwitched for Fusée Gelée
-      and
-      a ton of other things!
+      Mod of <a href="https://github.com/atlas44/web-fusee-launcher">WebFG</a> 是从 <a href="https://github.com/reswitched/fusee-launcher">fusee-launcher</a>.
+      移植过来的，感谢 atlas44 提供的 java 端口、rajkosto 提供的许多有效负载、ktemkin 和 ReSwitched 提供的 Fusée Gelée 以及大量其他东西！
     </div>
     <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
       <ul>
-        <li>This is pretty poorly tested. I just kind wrote it and whatever. I'm not responsible if anything goes
-          wrong!</li>
-        <li>This does NOT work on Windows due to a limitation in the Chrome implementation of WebUSB (and probably
-          other
-          reasons!)</li>
+        <li>不保证所有设备能用</li>
+        <li>T只能在chrome浏览器上使用</li>
         <li>This does NOT currently work on any browser but Chrome, because they don't implement WebUSB.</li>
-        <li>On Linux, you might get an access denied error!
-          If you do, you can try creating a file at <code>/etc/udev/rules.d/50-switch.rules</code>
-          <div>With the following contents:</div>
+        <li>在 Linux 上，您可能会收到访问被拒绝的错误！如果这样做，您可以尝试在以下位置创建文件 <code>/etc/udev/rules.d/50-switch.rules</code>
+          <div>包含以下内容：</div>
           <div><code>SUBSYSTEM=="usb", ATTR{idVendor}=="0955", MODE="0664", GROUP="plugdev"</code></div>
         </li>
-        <li>This has been tested and appears to work on Linux, OSX, Android (unrooted) and Chromebooks. Your mileage
-          may
-          vary.</li>
-
-        <li style="margin-top: 50px;">Contact Me: @ksamj</li>
+      
+        <li style="margin-top: 50px;">Contact Me: @wangrui1573</li>
       </ul>
     </div>
   </div>
